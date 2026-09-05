@@ -42,8 +42,8 @@ func (t *Timestamp) UnmarshalJSON(data []byte) error {
 }
 
 func main() {
-	start := time.Date(2026, 9, 6, 10, 0, 0, 0, time.UTC)
-	end := time.Date(2026, 9, 6, 11, 0, 0, 0, time.UTC)
+	start := time.Date(2026, 10, 15, 9, 0, 0, 0, time.UTC)
+	end := time.Date(2026, 10, 15, 13, 0, 0, 0, time.UTC)
 	err := ProcessLogs("input.txt", "output.txt", start, end)
 	if err != nil {
 		log.Fatal(err)
