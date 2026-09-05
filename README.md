@@ -2,6 +2,12 @@
 
 Program for filtering JSONL logs by time range.
 
+```go
+start := time.Date(2026, 10, 15, 9, 0, 0, 0, time.UTC)
+end := time.Date(2026, 10, 15, 13, 0, 0, 0, time.UTC)
+err := ProcessLogs("input.txt", "output.txt", start, end)
+```
+
 ## Input file format
 
 Each line is JSON:
@@ -17,3 +23,4 @@ Each line is JSON, but the timestamp is in RFC3339 format and the entries are fi
 ```json
 {"id":12323,"timestamp":"2026-10-15T09:40:00Z","value":235.4}
 {"id":123455,"timestamp":"2026-10-15T12:20:00Z","value":453.3}
+```
